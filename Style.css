@@ -1,137 +1,119 @@
-/* style.css */
-
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
     background-color: #f4f4f4;
-    color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
-a {
-    text-decoration: none;
-    color: #007bff;
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Dark Mode for Sections */
+.dark-mode section {
+    background: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: #333;
+    padding: 15px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
-    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* Hero Section */
 header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #007bff;
-    color: #fff;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header p {
-    font-size: 1.2em;
+    padding: 50px;
+    background: #007bff;
+    color: white;
 }
 
 header img {
+    width: 150px;
     border-radius: 50%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
+/* CV Download Button */
 .cv-button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #007bff;
+    font-size: 18px;
+    color: white;
+    background: #ff9800;
+    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
 .cv-button:hover {
-    background-color: #e0e0e0;
+    background: #e68900;
 }
 
 /* Sections */
 section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    font-size: 2em;
+/* Projects */
+.project {
     margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
 }
 
-.project, .blog-post {
-    margin-bottom: 30px;
+/* Blog */
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
 }
 
-.project h3, .blog-post h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Dark Mode Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.project p, .blog-post p {
-    font-size: 1em;
-    color: #666;
-}
-
-/* Contact Section */
-#contact p {
-    font-size: 1em;
-    margin: 10px 0;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark-mode nav {
-    background-color: #555;
-}
-
-body.dark-mode a {
-    color: #1e90ff;
-}
-
-body.dark-mode header {
-    background-color: #1e90ff;
-}
-
-body.dark-mode .cv-button {
-    background-color: #333;
-    color: #1e90ff;
-}
-
-body.dark-mode .cv-button:hover {
-    background-color: #555;
+.dark-mode #dark-mode-toggle {
+    background: #ff9800;
+    color: black;
 }
